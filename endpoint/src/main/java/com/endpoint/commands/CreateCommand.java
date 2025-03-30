@@ -30,8 +30,7 @@ public class CreateCommand implements FileSystemCommand {
 
         if (dirToCreate.equals("/")) {
             return new FileSystemCommandResult(rootDirectory);
-        } else
-        if (pathParts.length == 1) {
+        } else if (pathParts.length == 1) {
             // Means we've reached the end of the path
             // If dir exists, return it, otherwise create it
             for (Directory subDirectory : dir.getSubDirectories()) {
